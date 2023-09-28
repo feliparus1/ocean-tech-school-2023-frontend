@@ -1,7 +1,6 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import Card from './components/Card/Card'
-import { useEffect } from 'react'
 
 function App() {
   // const item1 = {
@@ -32,14 +31,14 @@ function App() {
 //  Quando executada, a função também renderiza o componente automaticamente
 
   async function carregamentoDadosApi() {
-      console.log("carregamentoDadosApi")
+      //console.log("carregamentoDadosApi")
       const response = await fetch("https://rickandmortyapi.com/api/character")
 
       const json = await response.json()
-      console.log('json',json)
+      //console.log('json',json)
 
       const results = json.results
-      console.log(results)
+      //console.log(results)
       setItens(results)
   }
 
@@ -50,7 +49,7 @@ function App() {
     carregamentoDadosApi();
   }, []) 
   
-  console.log("Renderizando o componente")
+  //console.log("Renderizando o componente")
 
   return (
     <>

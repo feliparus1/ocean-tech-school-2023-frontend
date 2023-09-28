@@ -12,7 +12,15 @@ export default function Card(props) {
     //     tags = [];
     // }
 
-    const tags = item.tags || [];
+    const tags = [
+        `Status: ${item.status}`,
+        `Espécie: ${item.species}`,
+        `Origem: ${item.origin.name}`,
+    ];
+    //console.log(tags)
+
+    // TODO: Fazer as tags funcionarem na nova estrutura de dados recebida da API
+    // Exibir Tab de status, species e origem
 
     return <div className="card">
             <h2>{item.name}</h2>
