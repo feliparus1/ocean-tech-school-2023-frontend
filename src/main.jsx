@@ -4,6 +4,7 @@ import App from './App.jsx'
 import './index.css'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
+  // roda duas vezes StrictMode
   <React.StrictMode>
     <App />
   </React.StrictMode>,

@@ -4,12 +4,14 @@ import Card from './components/Card/Card'
 function App() {
   const item1 = {
     nome: 'Rick Sanchez',
-    imagemUrl: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg'
+    imagemUrl: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
+    tags: ['Status: Vivo', 'Espécie: Humana']
   };
 
   const item2 = {
     nome: 'Morty Smith',
-    imagemUrl: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg'
+    imagemUrl: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
+    tags: ['Tag 3']
   };
 
   const item3 = {
@@ -21,8 +23,8 @@ function App() {
 
   return (
     <>
-      {itens.map(function (item) {
-          return <Card item={item}/>
+      {itens.map(function (item, index) {
+          return <Card item={item} key={`card_${index}`}/>
         })}
     </>
   )
