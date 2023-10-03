@@ -1,0 +1,21 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: gray;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.header > nav {
+    display: flex;
+    gap: 1rem;
+}
+
+.header > nav > a {
+    color: white;
+}
+
+.header > .logo-link {
+    display: flex;
+}
